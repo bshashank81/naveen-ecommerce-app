@@ -1,4 +1,4 @@
-FROM node:10-alpine as builder
+FROM node:14-alpine as builder
 COPY package.json package-lock.json ./
 RUN npm install && mkdir /app && mv ./node_modules ./app
 WORKDIR /app
